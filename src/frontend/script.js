@@ -22,7 +22,17 @@ function renderList() {
     list.innerHTML = ""
     items.forEach(item => {
         const newListItem = document.createElement("li")
+
+        const delete_button = document.createElement("button")
+        delete_button.innerText = "Delete Task"
+        const check_button = document.createElement("button")
+        check_button.innerText = "Check Task"
+
+        delete_button.addEventListener("click", function(e){
+            list.removeChild(item);
+        })
         newListItem.innerText = item
-        list.append(newListItem)
+        list.append(newListItem, delete_button, check_button)
     })
 }
+
