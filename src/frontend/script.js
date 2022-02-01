@@ -21,6 +21,7 @@ function addItem() {
     } else {
         alert("Do not let the field empty")
     }
+    create(input);
 }
 
 function renderList() {
@@ -37,14 +38,14 @@ function renderList() {
             del(newListItem, check_button, delete_button);
             var itemIndex_del = items.indexOf(item);
             items.splice(itemIndex_del, 1);
+            remove(itemIndex_del);
         })
         check_button.addEventListener("click", function(e) {
             del(newListItem, check_button, delete_button);
-            console.log(items);
             var itemIndex_check = items.indexOf(item);
             items.splice(itemIndex_check, 1);
-            console.log(items);
             updateTaskCounter();
+            update(itemIndex_check, item);
         })
 
         newListItem.innerText = item
