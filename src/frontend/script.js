@@ -51,4 +51,3 @@ function renderList() {
         list.append(newListItem, delete_button, check_button)
     })
 }
-
