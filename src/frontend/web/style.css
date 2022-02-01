@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    background-color: antiquewhite;
+}
+
+.parent {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes anim1 {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+#title {
+    animation: anim1 2s infinite alternate-reverse;
+}
