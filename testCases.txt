@@ -1,0 +1,14 @@
+Test Case #1 Is the form opening successfully?
+-Yes
+
+Test Case #2 Is the index opening after logging in?
+-Yes
+
+Test Case #3 Is it possible to add a task?
+-Yes
+
+Test Case #4 Is it possible to delete a task?
+-Yes
+
+Test Case #5 Is it possible to check a task?
+-Yes
