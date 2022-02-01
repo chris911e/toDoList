@@ -8,3 +8,16 @@ body {
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
+
+@keyframes anim1 {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+#title {
+    animation: anim1 2s infinite alternate-reverse;
+}
