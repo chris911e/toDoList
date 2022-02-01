@@ -42,7 +42,12 @@ function renderList() {
         delete_button.addEventListener("click", function(e){
             del(newListItem, check_button, delete_button);
             var itemIndex_del = items.indexOf(item);
-            items.splice(itemIndex_del, 1);
+            if (items.splice(itemIndex_del, 1)) {
+                alert("Successfully deleted");
+            } else {
+                alert("Failed to delete task");
+            }
+
             remove(itemIndex_del);
         })
         check_button.addEventListener("click", function(e) {
@@ -59,8 +64,13 @@ function renderList() {
 }
 
 function register() {
+
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
+
+    if (email == null || password == null) {
+        alert("Please fill out the form");
+    }
 
     auth(email, password);
     /*
